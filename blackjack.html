@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head><title></title>
+     <script src="//code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+<style>
+    #table {
+        background-color: darkgreen;
+        border: 1px solid brown;
+    }
+    label {
+        color:white;
+    }
+    
+</style>
+</head>
+    <body>
+    <div id="table">
+  <div id="messages"></div>
+  <div class="container">
+  <label>Dealer: </label>
+    <label>Player: </label>
+    </div>
+      <div class="container">
+          <div class="col-6">
+  <label id="dealer-points" class="points"></label>
+  <div id="dealer-hand" class="hand">
+      <img src="#">
+  </div></div>
+<div class="col-6">
+  <label id="player-points" class="points"></label>
+  <div id="player-hand" class="hand">
+            <img src="#">
+          </div></div>
+  </div>
+  <div class="buttons">
+    <button id="deal-button">Deal</button>
+    <button id="hit-button">Hit</button>
+    <button id="stand-button">Stand</button>
+  </div>
+</div>
+<script src="blackjack.js"></script>
+</body>
+</html>
