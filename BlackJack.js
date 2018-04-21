@@ -45,17 +45,20 @@ $(document).ready(function(){
    });
 });
 
-   $('#stand-button').click(function(){
-      newCard = myDeck[drawCard()];
-      console.log(newCard.point);
-      $('.dpoints').remove();
-      $('#dealer-hand').append('<p class="cards">'+ newCard.code +'</p>');
-      dpoints += newCard.point;
-      $('#dealer-points').append('<p class="dpoints">'+ dpoints +'</p>');
-      if (dpoints > 21) {
-         $('#messages').text('GAME OVER. You Win!');
-      }
-   });
+$('#stand-button').click(function(){
+   newCard = myDeck[drawCard()];
+   console.log(newCard.point);
+   $('.dpoints').remove();
+   $('#dealer-hand').append('<p class="cards">'+ newCard.code +'</p>');
+   dpoints += newCard.point;
+   $('#dealer-points').append('<p class="dpoints">'+ dpoints +'</p>');
+   if (dpoints > 21) {
+      $('#messages').text('GAME OVER. You Win!');
+   }
+   else if (dpoints > ppoints) {
+      $('#messages').text('GAME OVER. You lose : (');
+   }
+});
    
  $('#new-game').click(function(){
    window.location.reload(true); 
