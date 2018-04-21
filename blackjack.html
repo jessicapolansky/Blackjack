@@ -4,42 +4,66 @@
      <script src="//code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
-    #table {
-        background-color: darkgreen;
-        border: 1px solid brown;
+#table {
+    background-color: darkgreen;
+    border: 1px solid brown;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     }
     label {
         color:white;
+        
     }
-    
+
+    .cards {
+    font-size: 50px;
+    display: inline;
+    padding: 0 5px 0 5px;
+    }
+    #messages {
+        padding: 5px;
+    }
+button {
+    margin-top: 15px;
+}
+
 </style>
 </head>
     <body>
     <div id="table">
-  <div id="messages"></div>
-  <div class="container">
+  <div id="messages">Let's Play BlackJack!</div>
+<div class="container row">
+<div class="col-sm">
   <label>Dealer: </label>
+  </div>
+  <div class="col-6">
     <label>Player: </label>
-    </div>
-      <div class="container">
+    </div></div>
+      <div class="container row">
           <div class="col-6">
   <label id="dealer-points" class="points"></label>
   <div id="dealer-hand" class="hand">
-      <img src="#">
   </div></div>
 <div class="col-6">
   <label id="player-points" class="points"></label>
   <div id="player-hand" class="hand">
-            <img src="#">
           </div></div>
   </div>
   <div class="buttons">
     <button id="deal-button">Deal</button>
     <button id="hit-button">Hit</button>
     <button id="stand-button">Stand</button>
+    <br>
+    <button id="new-game">New Game</button>
   </div>
 </div>
-<script src="blackjack.js"></script>
+<script src="BlackJack.js"></script>
 </body>
 </html>

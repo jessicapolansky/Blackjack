@@ -1,0 +1,26 @@
+## [0.2.1] - 2017-11-17
+
+ - Improve file-type detection by dropping libmagic on *nix platforms (Issue #7)
+ - Add macOS High Sierra support (bump golang version for binaries to 1.19) (Issue #6)
+
+   Thanks to Paul Bailey (@pizzapanther) for his help with this release
+
+## [0.2.0] - 2016-08-06
+
+ - Automatically detect content type of file when uploading. Stops users having to manually change mime-types for use-cases where content type is important (static websites). Issue #2
+ - Add option to make files publicly readable (use -public flag)
+ - Completely reorganised source code (using packages), added top level comments
+
+## [0.1.1] - 2016-08-05
+
+ - Significantly rewritten code to linter standards
+ - Support simple asterisk globbing (for example *.go) in Ignore configuration
+
+## [0.1.0] - 2016-01-31
+
+ - Initial release.
+ - Upload files to S3 buckets.
+ - Track which git commits have been uploaded, only upload files that have changed since last push.
+ - Configuration file saves bucket/region arguments for simplified subsequent uploads.
+ - Files tracked in git can be ignored (not uploaded) using a configuration directive, supporting basic regexes.
+ - Files not tracked in git can be specified to be uploaded. A runtime flag can be given to force the upload of these files when no changes are made to git files.
