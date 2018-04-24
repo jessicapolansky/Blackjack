@@ -1,7 +1,8 @@
 $( document ).ready(function() {
     $('#deal-button').click(function () {
         var shuffle = $.get('https://deckofcardsapi.com/api/deck/new/shuffle/?');
-        var deck = shuffle['responseJSON'];
+        console.log(shuffle.deck_id);
+        var deck = shuffle.deck_id
         console.log(shuffle);
         console.log(deck);
     });
@@ -13,5 +14,4 @@ $( document ).ready(function() {
     
     
 });
-
 
